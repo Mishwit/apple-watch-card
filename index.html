@@ -1,160 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="./src/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href="./src/css/global.css" />
-    <link rel="stylesheet" href="./src/css/hero.css" />
-    <link rel="stylesheet" href="./src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
 
-    <title>Apple Watch SE 2022</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./js/js.js"></script>
   </head>
+
   <body>
-    <hero>
-      <div class="container-fluid text-center">
-        <div class="row hero-row">
-          <div class="col slider-col">
+    <main>
+      <div class="container-fluid">
+        <div class="row card">
+          <div class="col">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide card slider-card">
-                  <img
-                    src="./src/img/apple-watch-se-2022-1.png"
-                    class="card-img-top"
-                    alt="..."
-                  />
+                <div class="swiper-slide">
+                  <img src="./img/apple-watch-se-2022-1-black-big.png" alt="" />
                 </div>
-
-                <div class="swiper-slide card slider-card">
-                  <img
-                    src="./src/img/apple-watch-se-2022-2.png"
-                    class="card-img-mid"
-                    alt="..."
-                  />
+                <div class="swiper-slide">
+                  <img src="./img/apple-watch-se-2022-2-black-big.png" alt="" />
                 </div>
-
-                <div class="slider-card swiper-slide card">
-                  <img
-                    src="./src/img/apple-watch-se-2022-3.png"
-                    class="card-img-bot"
-                    alt="..."
-                  />
+                <div class="swiper-slide">
+                  <img src="./img/apple-watch-se-2022-3-black-big.png" alt="" />
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
           </div>
-          <!-- <div class="col slider-col">
-            <svg
-              width="52"
-              height="50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.167 28.125 26 17.708l10.833 10.417-1.543 1.458L26 20.651l-9.29 8.932-1.543-1.458Z"
-                fill="#404040"
-              />
-            </svg>
-            <div class="card slider-card">
-              <img
-                src="./src/img/apple-watch-se-2022-1.png"
-                class="card-img-top"
-                alt="..."
-              />
-            </div>
+        </div>
 
-            <div class="card slider-card">
-              <img
-                src="./src/img/apple-watch-se-2022-2.png"
-                class="card-img-mid"
-                alt="..."
-              />
-            </div>
-
-            <div class="card slider-card">
-              <img
-                src="./src/img/apple-watch-se-2022-3.png"
-                class="card-img-bot"
-                alt="..."
-              />
-            </div>
-            <svg
-              width="52"
-              height="50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M36.833 21.875 26 32.292 15.167 21.875l1.543-1.458L26 29.349l9.29-8.932 1.543 1.458Z"
-                fill="#404040"
-              />
-            </svg>
-          </div> -->
-
+        <div class="row info">
           <div class="col">
-            <div class="card hero-card">
-              <img
-                src="./src/img/hero-card.png"
-                class="card-img-hero"
-                alt="..."
-              />
-            </div>
-          </div>
-
-          <div class="col-sm model-info">
             <h2>Apple Watch SE 2022</h2>
 
-            <p class="model-description">
+            <span class="model-description">
               Доступно в <a href="#">рассрочку</a> от 3 499 ₽/мес. Доступно в
               <a href="#">Trade-In</a>
-            </p>
+            </span>
 
             <div class="options">
               <div class="model-color">
                 <span>Цвет</span>
                 <div class="colors">
-                  <div class="color-circle"></div>
-                  <div class="color-circle"></div>
-                  <div class="color-circle"></div>
+                  <div
+                    class="color-circle"
+                    onclick="changeModelColor('white', this)"
+                  ></div>
+
+                  <div
+                    class="color-circle active"
+                    onclick="changeModelColor('black', this)"
+                  ></div>
+
+                  <div
+                    class="color-circle"
+                    onclick="changeModelColor('beige', this)"
+                  ></div>
                 </div>
               </div>
 
               <div class="model-size">
                 <span>Экран</span>
-                <div>
-                  <button>40 мм</button>
-                  <button>44 мм</button>
+                <div class="model-size__buttons">
+                  <div class="button_size">40 мм</div>
+                  <div class="button_size">44 мм</div>
                 </div>
               </div>
             </div>
 
             <span class="line"></span>
+
             <div class="prices">
               <span class="price_new">33 990 ₽</span>
               <span class="price_old">43 990 ₽</span>
             </div>
-            <div class="hero-buttons">
+
+            <div class="info__buttons">
               <button type="button" class="btn btn-primary btn-lg button_cta">
                 Добавить в корзину
               </button>
@@ -173,9 +118,10 @@
                 </svg>
               </button>
             </div>
+
             <div class="model_code">
               <span>Код товара: MNTG3</span>
-              <span class="all-goods">
+              <a href="#" class="all-goods">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -187,23 +133,12 @@
                     fill="#000"
                   />
                 </svg>
-
                 Все товары Apple
-              </span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </hero>
-    <main></main>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        direction: "vertical",
-      });
-    </script>
+    </main>
   </body>
 </html>
